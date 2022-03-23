@@ -1,9 +1,21 @@
 \documentclass[a4paper,12pt]{article}
 
+
 \renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[a4paper, inner=1.7cm, outer=2.7cm,
+bottom=2cm, bindingoffset=1.2cm]{geometry}
 
 \usepackage[english]{babel}
 \usepackage{blindtext}
+\usepackage[scaled=.92]{helvet}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{index}
+
 
 \begin{document}
  \title{\Large{\textbf{Hello, World!}}}
@@ -11,5 +23,19 @@
  \date{March 22, 2022}
 
  \maketitle
+ \tableofcontents
+ \pagenumbering{roman}
+ \fancyhf{}
+
+ \renewcommand{\headrulewidth}{2pt}
+ \renewcommand{\footrulewidth}{1pt}
+
+ \fancyhead[RO]{\nouppercase{\leftmark}}
+ \fancyfoot[RO]{\thepage}
+
+ \section{Section Name}
+ \subsection{Subsection name}
+
+ \blindtext[5]
 
 \end{document}
